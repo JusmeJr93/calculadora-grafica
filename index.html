@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap5.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="./img/seno.png">
+
+
+    <title>Gráfica de funciones</title>
+</head>
+
+<body onload="plot();">
+    <div class="container-lg mt-3">
+
+        <h1 class="text-center mb-4"> Calculadora Gráfica de
+            Funciones</h1>
+
+
+        <div class="row justify-content-around row-gap-4">
+
+            <section id="parametros" class="col-sm-8 col-md-4 p-3 border border-dark-subtle border-3 rounded-4">
+                <div class="d-flex align-items-center gap-4">
+                    <label for="xMin" class="form-label">xMin: </label>
+                    <input type="number" id="xMin" step="0.5" value="0" class="form-control" oninput="plot();">
+                </div>
+
+                <div class="d-flex align-items-center mt-3 gap-4">
+                    <label for="xMax" class="form-label">xMax: </label>
+                    <input type="number" id="xMax" step="0.5" value="6.28" class="form-control" oninput="plot();">
+                </div>
+
+                <!-- Mensaje de error para x -->
+                <div id="error-x" class="text-danger"></div>
+
+                <div class="d-flex align-items-center  mt-3 gap-4">
+                    <label for="yMin" class="form-label">yMin: </label>
+                    <input type="number" id="yMin" step="0.5" value="-1" class="form-control" oninput="plot();">
+                </div>
+
+                <div class="d-flex align-items-center mt-3 gap-4">
+                    <label for="yMax" class="form-label">yMax: </label>
+                    <input type="number" id="yMax" step="0.5" value="1" class="form-control" oninput="plot();">
+                </div>
+
+                <!-- Mensaje de error para y -->
+                <div id="error-y" class="text-danger"></div>
+
+                <div class="d-flex align-items-center mt-3 gap-2">
+                    <label for="funcion" class="form-label">Función: </label>
+                    <input type="text" id="funcion" value="sin(x)" class="form-control" onchange="plot();">
+                </div>
+
+                <div class="d-flex align-items-center mt-3 gap-4">
+                    <label for="color" class="form-label">Color:</label>
+                    <input type="color" id="color" class="form-control form-control-color" onchange="plot();"
+                        title="Escoge un color">
+                </div>
+
+                <div class="d-grid mx-auto mt-3">
+                    <button type="button" class="btn btn-outline-success fw-bold" onclick="plot();">Gráfica de la
+                        función</button>
+                </div>
+            </section>
+
+            <section class="col-sm-8 col-md-7 p-3 border border-dark-subtle border-3 rounded-4">
+                <div id="grafica"></div>
+            </section>
+
+        </div>
+    </div>
+
+    <footer class="fixed-bottom">
+        <div class="text-center px-5 py-3 footer_div">
+            <p class="mb-0">Desarrollado por JUNIOR JUSMÉ</p>
+            <p class="mb-0">&copy;2024. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

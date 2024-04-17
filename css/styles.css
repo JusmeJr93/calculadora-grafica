@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+
+}
+
+
+body {
+    height: 100%;
+    /* Asegura que el elemento html también ocupa el 100% */
+    min-height: 100vh;
+    /* Mínima altura igual a la altura de la ventana del navegador */
+    display: flex;
+    /* Utiliza Flexbox para el posicionamiento */
+    flex-direction: column;
+    /* Alinea el contenido en dirección de columna */
+    justify-content: center;
+    /* Centra el contenido verticalmente */
+    align-items: center;
+    /* Centra el contenido horizontalmente */
+    background-image: linear-gradient(rgba(169, 239, 99, 0.5), rgba(8, 188, 185, 0.5));
+    background-size: cover;
+    /* Asegura que el fondo cubra todo el área */
+    background-position: center;
+    /* Centra el fondo */
+    background-repeat: no-repeat;
+    /* No repite el fondo */
+}
+
+.container-lg {
+    padding-bottom: 5rem;
+}
+
+/* Ajuste de medidas */
+#grafica {
+    width: 100%;
+    /* Asegura que ocupe todo el ancho del contenedor */
+    height: 100%;
+    /* Asegura que ocupe todo el alto del contenedor */
+}
+
+.footer_div {
+    background: #048e93;
+    color: #fcf5f5;
+}
+
+.footer_div p {
+    font-size: 0.8em;
+}
